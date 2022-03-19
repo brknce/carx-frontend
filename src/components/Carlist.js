@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddCar from "./AddCar.js";
 import EditCar from "./EditCar.js";
+import { CSVLink } from 'react-csv';
 
 class Carlist extends Component {
   constructor(props) {
@@ -136,6 +137,7 @@ class Carlist extends Component {
     return (
       <div className="App">
         <AddCar addCar={this.addCar} fetchCars={this.fetchCars} />
+        <CSVLink data={this.state.cars} separator=";">Export CSV</CSVLink>
         <ReactTable
           data={this.state.cars}
           columns={columns}

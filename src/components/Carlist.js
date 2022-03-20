@@ -54,7 +54,7 @@ class Carlist extends Component {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        Authorization : token
+        Authorization: token,
       },
       body: JSON.stringify(car),
     })
@@ -151,7 +151,7 @@ class Carlist extends Component {
     ];
 
     return (
-      <div className="App">
+      <div>
         <Grid container>
           <Grid item>
             <AddCar addCar={this.addCar} fetchCars={this.fetchCars} />

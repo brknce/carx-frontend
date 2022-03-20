@@ -37,7 +37,7 @@ const Login = () => {
     return <Carlist />;
   } else {
     return (
-      <div>
+      <div className="loginStyle">
         <ToastContainer autoClose={1500} />
         <TextField name="username" label="Username" onChange={handleChange} />
         <br />
